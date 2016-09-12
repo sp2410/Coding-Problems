@@ -1,0 +1,20 @@
+def reverse(A):
+        A=str(A)
+        if len(A)<=1:
+            return int(A)
+        
+        if A[0]=='-':
+            Anew=A[1:]
+            myint=int(A[0]+''.join(Anew[::-1]))
+            if myint.bit_length()<32:
+                return int(A[0]+''.join(Anew[::-1]))
+            else:
+                return 0
+        else:
+            myint=int(''.join(A[::-1]))
+            if myint.bit_length()<32:
+                return int(''.join(A[::-1]))
+            else:
+                return 0
+                
+#check if 32 bit:: x.bit_length()
