@@ -1,0 +1,6 @@
+def arrange(self, A):
+        for i in xrange(len(A)):
+            A[i]+=(A[A[i]]%len(A))*len(A)
+        for i in xrange(len(A)):
+            A[i]=A[i]/len(A)
+        return A[i]
