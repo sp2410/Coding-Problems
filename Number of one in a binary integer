@@ -1,0 +1,12 @@
+def numsetbits(n):
+	if n==0:
+		return 0
+	count=0
+	while n>0:
+		if n&1:
+			count+=1
+		n=n>>1
+	return count
+	
+	## go in a loop and right shift
+	## Check if the current bit is 1: increment count
