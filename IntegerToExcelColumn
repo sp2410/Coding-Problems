@@ -1,0 +1,6 @@
+def convertToTitle(n):
+	ans='' # edge check not needed because while loop wont run if the number is less than 1
+	while(n):
+		ans+=''+chr((n-1)%26+ord('A'))
+		n=(n-1)/26
+	return ans[::-1]
