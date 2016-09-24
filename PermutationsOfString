@@ -1,0 +1,11 @@
+def permutatons(string):
+	a=[]
+	if len(string)==0:
+		return []
+	if len(string)==1:
+		return [string]
+	for i in xrange(len(string)):
+		remlist=string[:i]+string[i+1:]
+		for p in permutations(remlist):
+			a.append(string[i]+''.join(p))
+	return a
