@@ -8,4 +8,4 @@ def permutatons(string):
 		remlist=string[:i]+string[i+1:]
 		for p in permutations(remlist):
 			a.append(string[i]+''.join(p))
-	return a
+	return list(set(a))
