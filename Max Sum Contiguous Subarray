@@ -1,4 +1,5 @@
 class Solution:
+    O(n) solution
     # @param A : tuple of integers
     # @return an integer
     def maxSubArray(self, A):
