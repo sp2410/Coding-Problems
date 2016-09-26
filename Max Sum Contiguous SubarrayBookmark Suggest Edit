@@ -1,0 +1,24 @@
+class Solution:
+    # @param A : tuple of integers
+    # @return an integer
+    def maxSubArray(self, A):
+        flag=False
+        l=len(A)
+        MaxSum=0
+        for x in A:
+            if x>=0:
+                flag=True
+        if (l and (flag==False)):
+            return max(A)
+            
+        startindex,NewSum=0,0
+        
+        while(l and flag and startindex<l):
+            NewSum+=A[startindex]
+            if NewSum<0:
+                NewSum=0
+            if MaxSum<NewSum:
+                MaxSum=NewSum
+            startindex+=1
+        return MaxSum
+        
