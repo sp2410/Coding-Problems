@@ -1,0 +1,32 @@
+def findFirstPositive(arr)
+#if empty
+ if !arr
+  return 
+ end
+ 
+#if array is empty
+ if arr.size <1
+  return 1
+ end
+ 
+ #Step 1: Set a variable for access to the last value which can be considered
+ last = 0
+ 
+ #step 2: Traverse the array and store the result in the same index with respect to finding the preoper value
+   for i in 0..(arr.size-1)
+
+      if arr[i] >=1
+        if arr[i] != last
+          arr[i] = last
+        else
+          arr[i] = last+1
+        end        
+      else
+        arr[i] = last
+      end
+      last = arr[i]
+   end
+ 
+ return arr[-1]
+
+end
